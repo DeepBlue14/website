@@ -1,0 +1,136 @@
+/*
+ * File: index.css
+ * Author: James T. Kuczynski <James_Kuczynski@student.uml.edu>
+ * File Description: Cascading style sheet for this project.
+ *
+ * Created 11/23/2016 by J.K.
+ * Last Modified: 11/23/2016 by J.K.
+ */
+
+
+body {
+    background: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/*specify settings for background animation*/
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 1000px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* every game piece is 50x50 pixels */
+.tile {
+    position: absolute;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+/* every square on the board */
+.board_square {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+/* the squares on the board should be very close to each other. */
+table {
+    border-spacing: 1px;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+div.container {
+    /*background-color: green;*/
+    position: absolute;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 10;
+    opacity: 0.95;
+}
+
+#boardDiv {
+    background-color: blue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 825px;
+    height: 920px; /*90 * 15 = 1350*/
+}
+
+#chip_data {
+    background-color: blue;
+    width: 150px;
+    height: 300px;
+    left: 900px;
+    top: 10px;
+    position: absolute;
+    border-radius: 15px;
+
+}
+
+#playerRack{
+    position: relative;
+    background-color: red;
+    margin-top: 835px;
+    width: 490px;
+    height: 60px;
+    border-color: black;
+    border-radius: 12px;
+
+}
+
+
+#data_stuff {
+    margin-top: 15px;
+    margin-left: 500px;
+}
+
+/*
+ * Style for the submit button.
+ */
+button {
+    background-color: cadetblue;
+    color: white;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    border-color: black;
+}
+
+/*
+ * Change the color of the submit button when the user's mouse hovers over it.
+ */
+button:hover {
+    background-color: dodgerblue;
+}
+
+
+#score {
+    
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+Project Synopsis: Assignment #2 for UMass Lowell's 91.61 GUI Programming I
+Project Description: This program will be used as the base index file for
+                     the following assignments of this course. 
+Author: James T. Kuczynski <James_Kuczynski@student.uml.edu>
+Weblab Username: jkuczyns
+File Description: This file is intended as the main page of a
+                  website.  It contains a menu at the top of the page,
+                  some introductory data, and a footer containing a
+                  copyright notice.
+Created: 09/07/2016 by J. Kuczynski 
+Last Updated: 12/08/2016 by J. Kuczynski
+Copyright (c) 2016 by James T. Kuczynski All Rights Reserved.
+
+Build & Run:
+Go to http://weblab.cs.uml.edu/~jkuczyns
+-->
+
+<html lang="en">
+
+    <!--
+    Set icon and title for web browser tab.
+    -->
+    <head>
+        <meta charset="UTF-8">
+        <title>James Kuczynski</title>
+        <link rel="shortcut icon" href="./res/letter.jpg"/>
+        <link rel="stylesheet" type="text/css" href="./css/my_style.css"/>
+    </head>
+
+    <body>
+
+        <!--
+        This div block will contain header data, namely the title to appear
+        on this specific page, and links to related pages.  I gave it a
+        different id so it can be treated differently from a stylistic
+        perspective from the rest of the data in this page in CSS.
+        -->
+        <div id="header">
+            <h1>James Kuczynski</h1>
+        </div>
+
+
+        <!-- 
+        Create navigation menu.  This contains links to other assignments for
+        this class.
+        -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Projects</a></li>
+                <li class="sublst">
+                    <a href="#">GUI Programming I Assignments</a>
+                    <ul>
+                        <li><a href="#">Assignment #2</a></li>
+                        <li><a href="#">Assignment #3</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #3</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #4</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #5</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #6</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #7</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #8</a></li> <!-- future work -->
+                        <li><a href="#">Assignment #9</a></li> <!-- future work -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!--
+        Series of title/image/textblock(s) for the main body of the page
+        -->
+
+        <!--
+        Introductory information, statement of purpose, and contact information.
+        -->
+        <div class="recent">
+            <h2>Introduction</h2>
+            <img src="./res/james.png" alt="James"/>
+            <p>
+                Welcome to my website. As an undergraduate student at the
+                University of Massachusetts Lowell, I have the opportunity
+                to take COMP 91.64 GUI Programming I with Dr. Wenjin Zhou.
+                This is my implementation of Assignment #4 for that class.
+                Since my work in Dr. Holly Yanco's lab involves human-robot
+                interaction, I am eager to learn how to design and develop
+                elegant and intuitive client-side web-based applications.
+            </p>
+            <p id="contact_info">
+                James Kuczynski
+                <br>
+                James_Kuczynski@student.uml.edu
+            </p>
+        </div>
+
+        <!--
+        Information about my education.
+        -->
+        <div class="recent">
+            <h2>Education</h2>
+            <img src="./res/education.jpg" alt="education"/>
+            <p>
+                I am an undergraduate student at the <a href="http://www.uml.edu/">University of Massachusetts Lowell</a>
+                in the Computer Science program.  I also serve as senior
+                technical advisor for the robotics club.
+            </p>
+        </div>
+
+        <!--
+        This section elaborates on my current work.
+        -->
+        <div class="recent">
+            <h2>Employment</h2>
+            <img src="./res/self_portrait.jpg" alt="self_portrait"/>
+            <h3>Robotics Laboratory</h3>
+            <p>
+                I am currently employed as an Undergraduate Researcher in Dr. Holly Yanco's <a href="http://robotics.cs.uml.edu/">Robotics Laboratory</a>
+                at the UMass Lowell's Computer Science Department.  My work includes
+                designing and implementing experimental software for robotic systems,
+                assisting graduate students in running their experiments, and publishing papers.
+            </p>
+            <p>
+                My work-related research includes tactical systems, user interfaces for
+                assistive and Urban Search and Rescue (USAR) robots, optics, and mobile systems.
+                Many of these projects are developed using <a href="http://www.ros.org/">ROS</a>,
+                a meta-operating system for developing robotics applications, while some of our
+                more portable software is developed on Android.
+            </p>
+        </div>
+
+        <!--
+        This block contains information about my hobbies.
+        -->
+        <div class="recent">
+            <h2>Hobbies</h2>
+            <img src="./res/pianist.png" alt="pianist"/>
+            <p>
+                I played and composed classical piano for over 10 years.  Unfortunately,
+                my work and school give me little time for such pursuits at the present.
+                I also enjoy gardening and wood carving.
+            </p>
+        </div>
+
+
+        <!--
+        The footer displays copyright information.
+        -->
+        <div id="footer">
+            Copyright (c) 2016 James T. Kuczynski All Rights Reserved
+            <img class="logo" src="./res/html_badge.png" alt="valid html"/>
+            <img class="logo" src="./res/css_badge.png" alt="valid css"/>
+        </div>
+    </body>
+</html>

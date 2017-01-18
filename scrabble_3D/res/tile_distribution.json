@@ -1,0 +1,166 @@
+{
+  "tiles": [
+    {
+      "char": "_",
+      "count": 2,
+      "value": 0,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_Blank.jpg"
+    },
+    {
+      "char": "A",
+      "count": 9,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_A.jpg"
+    },
+    {
+      "char": "B",
+      "count": 2,
+      "value": 3,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_B.jpg"
+    },
+    {
+      "char": "C",
+      "count": 2,
+      "value": 3,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_C.jpg"
+    },
+    {
+      "char": "D",
+      "count": 4,
+      "value": 2,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_D.jpg"
+    },
+    {
+      "char": "E",
+      "count": 12,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_E.jpg"
+    },
+    {
+      "char": "F",
+      "count": 2,
+      "value": 4,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_F.jpg"
+    },
+    {
+      "char": "G",
+      "count": 3,
+      "value": 2,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_G.jpg"
+    },
+    {
+      "char": "H",
+      "count": 2,
+      "value": 4,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_H.jpg"
+    },
+    {
+      "char": "I",
+      "count": 9,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_I.jpg"
+    },
+    {
+      "char": "J",
+      "count": 1,
+      "value": 8,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_J.jpg"
+    },
+    {
+      "char": "K",
+      "count": 1,
+      "value": 5,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_K.jpg"
+    },
+    {
+      "char": "L",
+      "count": 4,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_L.jpg"
+    },
+    {
+      "char": "M",
+      "count": 2,
+      "value": 3,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_M.jpg"
+    },
+    {
+      "char": "N",
+      "count": 6,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_N.jpg"
+    },
+    {
+      "char": "O",
+      "count": 8,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_O.jpg"
+    },
+    {
+      "char": "P",
+      "count": 2,
+      "value": 3,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_P.jpg"
+    },
+    {
+      "char": "Q",
+      "count": 1,
+      "value": 10,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_Q.jpg"
+    },
+    {
+      "char": "R",
+      "count": 6,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_R.jpg"
+    },
+    {
+      "char": "S",
+      "count": 4,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_S.jpg"
+    },
+    {
+      "char": "T",
+      "count": 6,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_T.jpg"
+    },
+    {
+      "char": "U",
+      "count": 4,
+      "value": 1,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_U.jpg"
+    },
+    {
+      "char": "V",
+      "count": 2,
+      "value": 4,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_V.jpg"
+    },
+    {
+      "char": "W",
+      "count": 2,
+      "value": 4,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_W.jpg"
+    },
+    {
+      "char": "X",
+      "count": 1,
+      "value": 8,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_X.jpg"
+    },
+    {
+      "char": "Y",
+      "count": 2,
+      "value": 4,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_Y.jpg"
+    },
+    {
+      "char": "Z",
+      "count": 1,
+      "value": 10,
+      "image": "./res/scrabble_tiles/wood/Scrabble_Tile_Z.jpg"
+    }
+  ]
+}

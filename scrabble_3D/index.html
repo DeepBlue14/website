@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<!--
+File: index.html
+Author: James T. Kuczynski <James_Kuczynski@student.uml.edu>
+File Description: This file contains an implementation of the game
+				  Scrabble.
+
+Created: 11/23/2016 by J.K.
+Last Created: 12/06/2016 by J.K.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
+    <link rel="stylesheet" href="css/index.css">
+    <title>Scrabble</title>
+</head>
+<body>
+    <!-- outer div to contain the board and rack -->
+    <div class="container">
+
+        <!--  div to contain the game board (table)-->
+        <div id="boardDiv" class="container">
+
+            <!-- the game board is represented as a table, with each square in a td -->
+            <table>
+                <tr>
+                    <td><img id="board_square_0" class="board_square" title="3" src="res/triple_word.png" alt="triple word"></td>
+                    <td><img id="board_square_1" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_2" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_3" class="board_square" title="1" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_4" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_5" class="board_square" title="2" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_6" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_7" class="board_square" title="3" src="res/triple_word.png" alt="triple word"></td>
+                    <td><img id="board_square_8" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_9" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_10" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_11" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_12" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_13" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_14" class="board_square" title="3" src="res/triple_word.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_15" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_16" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_17" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_18" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_19" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_20" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_21" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_22" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_23" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_24" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_25" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_26" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_27" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_28" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_29" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_30" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_31" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_32" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_33" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_34" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_35" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_36" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_37" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_38" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_39" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_40" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_41" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_42" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_43" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_44" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_45" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_46" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_47" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_48" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_49" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_50" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_51" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_52" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_53" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_54" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_55" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_56" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_57" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_58" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_59" class="board_square" title="2" src="res/double_letter.png" alt="double word"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_60" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_61" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_62" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_63" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_64" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_65" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_66" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_67" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_68" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_69" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_70" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_71" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_72" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_73" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_74" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_75" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_76" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_77" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_78" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_79" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_80" class="board_square" title="2" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_81" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_82" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_83" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_84" class="board_square" title="2" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_85" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_86" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_87" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_88" class="board_square" title="2" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_89" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_90" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_91" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_92" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_93" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_94" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_95" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_96" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_97" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_98" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_99" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_100" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_101" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_102" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_103" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_104" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_105" class="board_square" title="30" src="res/triple_word.png" alt="empty space"></td>
+                    <td><img id="board_square_106" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_107" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_108" class="board_square" title="2" src="res/double_letter.png" alt="empty space"></td>
+                    <td><img id="board_square_109" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_110" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_111" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_112" class="board_square" title="1" src="res/start.png" alt="empty space"></td>
+                    <td><img id="board_square_113" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_114" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_115" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_116" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_117" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_118" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_119" class="board_square" title="30" src="res/triple_word.png" alt="triple word"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_120" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_121" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_122" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_123" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_124" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_125" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_126" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_127" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_128" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_129" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_130" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_131" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_132" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_133" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_134" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_135" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_136" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_137" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_138" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_139" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_140" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_141" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_142" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_143" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_144" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_145" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_146" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_147" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_148" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_149" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_150" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_151" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_152" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_153" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_154" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_155" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_156" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_157" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_158" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_159" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_160" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_161" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_162" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_163" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_164" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_165" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_166" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_167" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_168" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_169" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_170" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_171" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_172" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_173" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_174" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_175" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_176" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_177" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_178" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_179" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_180" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_181" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_182" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_183" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_184" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_185" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_186" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_187" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_188" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_189" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_190" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_191" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_192" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_193" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_194" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_195" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_196" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_197" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_198" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_199" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_200" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_201" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_202" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_203" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_204" class="board_square" title="3" src="res/triple_letter.png" alt="triple letter"></td>
+                    <td><img id="board_square_205" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_206" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_207" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_208" class="board_square" title="20" src="res/double_word.png" alt="double word"></td>
+                    <td><img id="board_square_209" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                </tr>
+                <tr>
+                    <td><img id="board_square_210" class="board_square" title="30" src="res/triple_word.png" alt="triple word"></td>
+                    <td><img id="board_square_211" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_212" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_213" class="board_square" title="2" src="res/double_letter.png" alt="double letter"></td>
+                    <td><img id="board_square_214" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_215" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_216" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_217" class="board_square" title="30" src="res/triple_word.png" alt="triple word"></td>
+                    <td><img id="board_square_218" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_219" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_220" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_221" class="board_square" title="2" src="res/double_letter.png" alt="empty space"></td>
+                    <td><img id="board_square_222" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_223" class="board_square" title="1" src="res/empty_space.png" alt="empty space"></td>
+                    <td><img id="board_square_224" class="board_square" title="30" src="res/triple_word.png" alt="triple word"></td>
+                </tr>
+            </table>
+
+
+            <!--
+            - restartBtn: resets the board
+            - endTurnBtn: clicking this will update the user's score (if the new entry is a valid word
+            -->
+            <div id="data_stuff">
+                <button id="restartBtn" onclick="javascript:restart()">Restart</button>
+                <button id="endTurnBtn" onclick="javascript:endTurn()">End Turn</button>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+        </div>
+
+
+        <!-- This div contains the player's rack -->
+        <div id="playerRack" class="container"></div>
+
+
+        <!-- This table contains the number of pieces which have not been
+             dealt yet, i.e. total_pieces - (pieces_on_board + pieces_on_rack)-->
+        <div id="chip_data">
+            <table>
+                <tr>
+                    <td>Blank: <span id="blank_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>A: <span id="a_count">9</span></td>
+                    <td>B: <span id="b_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>C: <span id="c_count">2</span></td>
+                    <td>D: <span id="d_count">4</span></td>
+                </tr>
+                <tr>
+                    <td>E: <span id="e_count">12</span></td>
+                    <td>F: <span id="f_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>G: <span id="g_count">3</span></td>
+                    <td>H: <span id="h_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>I: <span id="i_count">9</span></td>
+                    <td>J: <span id="j_count">1</span></td>
+                </tr>
+                <tr>
+                    <td>K: <span id="k_count">1</span></td>
+                    <td>L: <span id="l_count">4</span></td>
+                </tr>
+                <tr>
+                    <td>M: <span id="m_count">2</span></td>
+                    <td>N: <span id="n_count">6</span></td>
+                </tr>
+                <tr>
+                    <td>O: <span id="o_count">8</span></td>
+                    <td>P: <span id="p_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>Q: <span id="q_count">1</span></td>
+                    <td>R: <span id="r_count">6</span></td>
+                </tr>
+                <tr>
+                    <td>S: <span id="s_count">4</span></td>
+                    <td>T: <span id="t_count">6</span></td>
+                </tr>
+                <tr>
+                    <td>U: <span id="u_count">4</span></td>
+                    <td>V: <span id="v_count">2</span></td>
+                </tr>
+                <tr>
+                    <td>W: <span id="w_count">2</span></td>
+                    <td>X: <span id="x_count">1</span></td>
+                </tr>
+                <tr>
+                    <td>Y: <span id="y_count">2</span></td>
+                    <td>Z: <span id="z_count">1</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Javascript files:
+            - ajax
+            - jquery-ui
+            - bootstrap (currently unused)
+            - jQuery-validation
+            - THREE.js 3D graphics files
+            - my source files
+        -->
+        <script src="js/lib/jquery/jquery.min.js"></script>
+        <script src="js/lib/jquery_ui/jquery-ui.min.js"></script>
+        <script src="js/lib/three.js/three.js"></script>
+        <script src="js/lib/three.js/Detector.js"></script>
+        <script src="js/lib/three.js/stats.min.js"></script>
+        <script src="js/graphics.js"></script>
+        <script src="js/audio.js"></script>
+        <script src="js/util.js"></script>
+        <script src="js/scrabble.js"></script>
+    </div>
+</body>
+</html>

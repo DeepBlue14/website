@@ -1,0 +1,156 @@
+/*
+ * Copyright (c) 2016 by James T. Kuczynski All Rights Reserved
+ */
+
+/* 
+ * File: my_style.css
+ * Author: James T. Kuczynski <James_Kuczynski@student.uml.edu>
+ * File Description: Cascading style sheet for Assignment #2
+ *
+ * Created: 09/29/2016
+ * Last Modified: 12/08/2016 by JTK
+*/
+
+logo {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+body {
+    background-image: url("./../res/space1.jpg");
+    min-width: 695px;
+}
+
+#header {
+    background-color: black;
+    opacity: 0.8;
+    color: whitesmoke;
+    text-align: center;
+    padding: 0.3em;
+}
+
+#section {
+    width: 345px;
+    opacity: 0.5;
+    float: left;
+    padding: 10px; 
+}
+
+#footer {
+    background-color: black;
+    opacity: 0.95;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 0px;
+    padding: 15px;
+    padding-bottom: 25px;
+}
+
+h2 {
+    color: whitesmoke;
+    margin-left: 1.5em;
+}
+
+img {
+    height: 187px;
+    width: 200px;
+}
+
+/* Size and placement of W3C HTML and CSS validation icons in the footer. */
+img.logo {
+    height: 36px;
+    width: 103px;
+    display: inline-block;
+    float: right;
+}
+
+/* Styalize the contact information at the end of the introduction block. */
+#contact_info {
+    color: wheat;
+    font-style: italic
+}
+
+#contact_info:first-letter {
+    color: goldenrod;
+}
+
+/* BEGIN navigation bar style elements. */
+nav {
+    background-color: #1a2f60;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1a2f61;
+    opacity: 0.93;
+    display: block;
+    margin: 0px;
+    overflow: hidden;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0;
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    color: whitesmoke;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+
+}
+
+nav li > ul{
+    display : none;
+    margin-top: 1px;
+    background-color: #1a2f60;
+
+}
+
+li > ul > li{
+    display: block;
+}
+
+/*
+Assignment sub-menu
+*/
+nav  li > ul li a {
+    color: whitesmoke;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 2em;
+
+    text-decoration: none;
+}
+
+/* List item background color deepens when hovered over. */
+nav li:hover {
+    background-color: #122247;
+}
+
+nav li:hover > ul {
+    position: absolute;
+    display : block;
+}
+
+nav ul > li.sublst {
+    background: url(../res/arrow_down.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+div.recent {
+    background-color: black;
+    color: whitesmoke;
+    margin: 20px;
+    padding: 20px;
+}
+/* END Navigation bar style elements. */
